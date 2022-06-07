@@ -1,0 +1,43 @@
+Algoritmo "Exercicio07"
+   // Exercício 07
+   // Receba se o usuário quer sacar ou depositar, receba o valor e atualize o saldo, exiba o valor inicial, a operação escolhida e o saldo.
+
+Var
+// Seção de Declarações das variáveis 
+   opcao: inteiro
+   valorInicial, saldo, saque, deposito: real
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+   escreval("Bem-vindo ao Menu")
+   escreval("Aperte 1 para sacar")
+   escreval("Aperte 2 para depositar")
+   leia(opcao)
+   escreva("Informe quanto você tem na conta: ")
+   leia(valorInicial)
+
+   se (opcao = 1) entao
+      escreva("Quanto deseja sacar? ")
+      leia(saque)
+      saldo <- valorInicial - saque
+   fimse
+   
+   se (opcao = 2) entao
+      escreva("Quanto deseja depositar? ")
+      leia(deposito)
+      saldo <- valorInicial + deposito
+   fimse
+   
+   escreval("Saldo = ", saldo)
+   escreval("Valor Inicial = ", valorInicial)
+   
+   se (opcao = 1) entao
+      escreva("Opção escolhida = saque")
+   senao
+        se (opcao = 2) entao
+           escreva("Opção escolhida = depóstio")
+        fimse
+   fimse
+   
+Fimalgoritmo
